@@ -1,0 +1,13 @@
+#!/bin/bash
+set -euo pipefail
+cd "$(dirname "$0")"
+export WM_PROJECT_DIR="${WM_PROJECT_DIR:-/usr/share/openfoam}"
+export FOAM_ETC="${FOAM_ETC:-$WM_PROJECT_DIR/etc}"
+blockMesh > log.blockMesh 2>&1
+topoSet > log.topoSet 2>&1
+createPatch -overwrite > log.createPatch 2>&1
+python3 prepare_pressure.py > log.pressure 2>&1
+checkMesh -allGeometry -allTopology > log.checkMesh 2>&1
+grep -q 'Mesh OK' log.checkMesh
+buoyantBoussinesqSimpleFoam > log.solver 2>&1
+postProcess -func writeCellCentres -latestTime > log.centres 2>&1

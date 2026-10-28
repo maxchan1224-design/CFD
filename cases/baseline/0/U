@@ -1,0 +1,22 @@
+FoamFile { version 2.0; format ascii; class volVectorField; object U; }
+dimensions [0 1 -1 0 0 0 0];
+internalField uniform (0 0 0);
+boundaryField {
+floor { type fixedValue; value uniform (0 0 0); }
+ceiling { type fixedValue; value uniform (0 0 0); }
+west { type fixedValue; value uniform (0 0 0); }
+east { type fixedValue; value uniform (0 0 0); }
+south { type fixedValue; value uniform (0 0 0); }
+north { type fixedValue; value uniform (0 0 0); }
+supply1 { type flowRateInletVelocity; volumetricFlowRate constant 0.145; extrapolateProfile no; value uniform (0 0 0); }
+supply2 { type flowRateInletVelocity; volumetricFlowRate constant 0.145; extrapolateProfile no; value uniform (0 0 0); }
+extract1 { type flowRateInletVelocity; volumetricFlowRate constant -0.28; extrapolateProfile no; value uniform (0 0 0); }
+extract2 { type flowRateInletVelocity; volumetricFlowRate constant -0.28; extrapolateProfile no; value uniform (0 0 0); }
+hood1 { type fixedValue; value uniform (0 0 0); }
+hood2 { type fixedValue; value uniform (0 0 0); }
+hood3 { type fixedValue; value uniform (0 0 0); }
+hood4 { type fixedValue; value uniform (0 0 0); }
+hood5 { type fixedValue; value uniform (0 0 0); }
+transfer1 { type pressureNormalInletOutletVelocity; value uniform (0 0 0); }
+transfer2 { type pressureNormalInletOutletVelocity; value uniform (0 0 0); }
+}

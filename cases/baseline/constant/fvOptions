@@ -1,0 +1,7 @@
+FoamFile { version 2.0; format ascii; class dictionary; object fvOptions; }
+peopleHeat { type scalarSemiImplicitSource; active true; selectionMode cellZone; cellZone people; volumeMode absolute; injectionRateSuSp { T (0.3106361829025845 0); } }
+cookingHeat1 { type scalarSemiImplicitSource; active true; selectionMode cellZone; cellZone cook1; volumeMode absolute; injectionRateSuSp { T (0.0 0); } }
+cookingHeat2 { type scalarSemiImplicitSource; active true; selectionMode cellZone; cellZone cook2; volumeMode absolute; injectionRateSuSp { T (0.0 0); } }
+cookingHeat3 { type scalarSemiImplicitSource; active true; selectionMode cellZone; cellZone cook3; volumeMode absolute; injectionRateSuSp { T (0.0 0); } }
+cookingHeat4 { type scalarSemiImplicitSource; active true; selectionMode cellZone; cellZone cook4; volumeMode absolute; injectionRateSuSp { T (0.0 0); } }
+cookingHeat5 { type scalarSemiImplicitSource; active true; selectionMode cellZone; cellZone cook5; volumeMode absolute; injectionRateSuSp { T (0.0 0); } }

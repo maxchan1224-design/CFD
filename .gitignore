@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+.pytest_cache/
+frontend/node_modules/
+frontend/dist/
+runs/
+scenarios/
+cases/baseline/constant/polyMesh/
+cases/baseline/[1-9]*/
+cases/baseline/log.*
+cases/baseline/results.json
+cases/baseline/validation.json
+*.zip
+frontend/test-results/
+frontend/playwright-report/
+
+diagnostics/

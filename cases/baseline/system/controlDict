@@ -1,0 +1,11 @@
+FoamFile { version 2.0; format ascii; class dictionary; object controlDict; }
+application buoyantBoussinesqSimpleFoam;
+startFrom startTime; startTime 0; stopAt endTime; endTime 5000; deltaT 1;
+writeControl timeStep; writeInterval 5000; purgeWrite 1; writeFormat ascii; writePrecision 10; writeCompression off; timeFormat general; timePrecision 6; runTimeModifiable false;
+functions { waterVapour {
+ type scalarTransport; libs ("libsolverFunctionObjects.so"); field w;
+ phi phi; rho none; schemesField w; nCorr 2; alphaD 1.66666667; alphaDt 1.42857143;
+ executeControl timeStep; executeInterval 1; writeControl writeTime;
+ fvOptions { peopleWater { type scalarSemiImplicitSource; active true; selectionMode cellZone; cellZone people; volumeMode absolute; injectionRateSuSp { w (9.35374149659864e-05 0); } } cookingWater1 { type scalarSemiImplicitSource; active true; selectionMode cellZone; cellZone cook1; volumeMode absolute; injectionRateSuSp { w (0.0 0); } } cookingWater2 { type scalarSemiImplicitSource; active true; selectionMode cellZone; cellZone cook2; volumeMode absolute; injectionRateSuSp { w (0.0 0); } } cookingWater3 { type scalarSemiImplicitSource; active true; selectionMode cellZone; cellZone cook3; volumeMode absolute; injectionRateSuSp { w (0.0 0); } } cookingWater4 { type scalarSemiImplicitSource; active true; selectionMode cellZone; cellZone cook4; volumeMode absolute; injectionRateSuSp { w (0.0 0); } } cookingWater5 { type scalarSemiImplicitSource; active true; selectionMode cellZone; cellZone cook5; volumeMode absolute; injectionRateSuSp { w (0.0 0); } } }
+}
+ }

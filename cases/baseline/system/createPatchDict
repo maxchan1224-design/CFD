@@ -1,0 +1,15 @@
+FoamFile { version 2.0; format ascii; class dictionary; object createPatchDict; }
+pointSync false;
+patches (
+{ name supply1; patchInfo { type patch; } constructFrom set; set supply1; }
+{ name supply2; patchInfo { type patch; } constructFrom set; set supply2; }
+{ name extract1; patchInfo { type patch; } constructFrom set; set extract1; }
+{ name extract2; patchInfo { type patch; } constructFrom set; set extract2; }
+{ name hood1; patchInfo { type wall; } constructFrom set; set hood1; }
+{ name hood2; patchInfo { type wall; } constructFrom set; set hood2; }
+{ name hood3; patchInfo { type wall; } constructFrom set; set hood3; }
+{ name hood4; patchInfo { type wall; } constructFrom set; set hood4; }
+{ name hood5; patchInfo { type wall; } constructFrom set; set hood5; }
+{ name transfer1; patchInfo { type patch; } constructFrom set; set transfer1; }
+{ name transfer2; patchInfo { type patch; } constructFrom set; set transfer2; }
+);

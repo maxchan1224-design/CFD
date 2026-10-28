@@ -1,0 +1,22 @@
+FoamFile { version 2.0; format ascii; class volScalarField; object nut; }
+dimensions [0 2 -1 0 0 0 0];
+internalField uniform 0;
+boundaryField {
+floor { type nutkWallFunction; value uniform 0; }
+ceiling { type nutkWallFunction; value uniform 0; }
+west { type nutkWallFunction; value uniform 0; }
+east { type nutkWallFunction; value uniform 0; }
+south { type nutkWallFunction; value uniform 0; }
+north { type nutkWallFunction; value uniform 0; }
+supply1 { type calculated; value uniform 0; }
+supply2 { type calculated; value uniform 0; }
+extract1 { type calculated; value uniform 0; }
+extract2 { type calculated; value uniform 0; }
+hood1 { type nutkWallFunction; value uniform 0; }
+hood2 { type nutkWallFunction; value uniform 0; }
+hood3 { type nutkWallFunction; value uniform 0; }
+hood4 { type nutkWallFunction; value uniform 0; }
+hood5 { type nutkWallFunction; value uniform 0; }
+transfer1 { type calculated; value uniform 0; }
+transfer2 { type calculated; value uniform 0; }
+}

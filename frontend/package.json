@@ -1,0 +1,19 @@
+{
+  "name": "demo-kitchen-cfd",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "test": "playwright test"
+  },
+  "dependencies": {
+    "three": "0.180.0",
+    "lucide": "0.468.0"
+  },
+  "devDependencies": {
+    "vite": "6.3.6",
+    "@playwright/test": "1.56.1"
+  }
+}

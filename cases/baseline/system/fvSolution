@@ -1,0 +1,7 @@
+FoamFile { version 2.0; format ascii; class dictionary; object fvSolution; }
+solvers {
+p_rgh { solver GAMG; tolerance 1e-10; relTol 0; smoother GaussSeidel; }
+"(U|T|k|epsilon|w)" { solver smoothSolver; smoother symGaussSeidel; tolerance 1e-10; relTol .01; }
+}
+SIMPLE { nNonOrthogonalCorrectors 0; pRefCell 0; pRefValue 0; consistent no; }
+relaxationFactors { fields { p_rgh 1; } equations { U .15; T .3; k .3; epsilon .3; w .7; } }

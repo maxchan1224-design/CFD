@@ -1,0 +1,41 @@
+FoamFile { version 2.0; format ascii; class dictionary; object topoSetDict; }
+actions (
+{ name supply1; type faceSet; action new; source patchToFace; sourceInfo { name ceiling; } }
+{ name supply1; type faceSet; action subset; source boxToFace; sourceInfo { box (1.0899999999999999 0.89 2.89) (1.71 1.51 2.91); } }
+{ name supply2; type faceSet; action new; source patchToFace; sourceInfo { name ceiling; } }
+{ name supply2; type faceSet; action subset; source boxToFace; sourceInfo { box (5.29 0.89 2.89) (5.909999999999999 1.51 2.91); } }
+{ name extract1; type faceSet; action new; source patchToFace; sourceInfo { name east; } }
+{ name extract1; type faceSet; action subset; source boxToFace; sourceInfo { box (6.99 1.19 2.19) (7.01 1.81 2.81); } }
+{ name extract2; type faceSet; action new; source patchToFace; sourceInfo { name east; } }
+{ name extract2; type faceSet; action subset; source boxToFace; sourceInfo { box (6.99 3.9899999999999998 2.19) (7.01 4.609999999999999 2.81); } }
+{ name hood1; type faceSet; action new; source patchToFace; sourceInfo { name ceiling; } }
+{ name hood1; type faceSet; action subset; source boxToFace; sourceInfo { box (0.41000000000000003 4.69 2.89) (1.19 5.31 2.91); } }
+{ name hood2; type faceSet; action new; source patchToFace; sourceInfo { name ceiling; } }
+{ name hood2; type faceSet; action subset; source boxToFace; sourceInfo { box (1.71 4.69 2.89) (2.49 5.31 2.91); } }
+{ name hood3; type faceSet; action new; source patchToFace; sourceInfo { name ceiling; } }
+{ name hood3; type faceSet; action subset; source boxToFace; sourceInfo { box (3.01 4.69 2.89) (3.79 5.31 2.91); } }
+{ name hood4; type faceSet; action new; source patchToFace; sourceInfo { name ceiling; } }
+{ name hood4; type faceSet; action subset; source boxToFace; sourceInfo { box (4.3100000000000005 4.69 2.89) (5.09 5.31 2.91); } }
+{ name hood5; type faceSet; action new; source patchToFace; sourceInfo { name ceiling; } }
+{ name hood5; type faceSet; action subset; source boxToFace; sourceInfo { box (5.61 4.69 2.89) (6.39 5.31 2.91); } }
+{ name transfer1; type faceSet; action new; source patchToFace; sourceInfo { name west; } }
+{ name transfer1; type faceSet; action subset; source boxToFace; sourceInfo { box (-0.01 2.44 0) (0.01 3.34 1.055); } }
+{ name transfer2; type faceSet; action new; source patchToFace; sourceInfo { name west; } }
+{ name transfer2; type faceSet; action subset; source boxToFace; sourceInfo { box (-0.01 2.44 1.055) (0.01 3.34 2.11); } }
+{ name people; type cellSet; action new; source boxToCell; sourceInfo { box (1.0 1.8 0.1) (6.0 4.1 1.9); } }
+{ name people; type cellZoneSet; action new; source setToCellZone; sourceInfo { set people; } }
+{ name cook1; type cellSet; action new; source boxToCell; sourceInfo { box (0.41000000000000003 4.69 0.6) (1.19 5.31 1.2); } }
+{ name cook1; type cellZoneSet; action new; source setToCellZone; sourceInfo { set cook1; } }
+{ name cook2; type cellSet; action new; source boxToCell; sourceInfo { box (1.71 4.69 0.6) (2.49 5.31 1.2); } }
+{ name cook2; type cellZoneSet; action new; source setToCellZone; sourceInfo { set cook2; } }
+{ name cook3; type cellSet; action new; source boxToCell; sourceInfo { box (3.01 4.69 0.6) (3.79 5.31 1.2); } }
+{ name cook3; type cellZoneSet; action new; source setToCellZone; sourceInfo { set cook3; } }
+{ name cook4; type cellSet; action new; source boxToCell; sourceInfo { box (4.3100000000000005 4.69 0.6) (5.09 5.31 1.2); } }
+{ name cook4; type cellZoneSet; action new; source setToCellZone; sourceInfo { set cook4; } }
+{ name cook5; type cellSet; action new; source boxToCell; sourceInfo { box (5.61 4.69 0.6) (6.39 5.31 1.2); } }
+{ name cook5; type cellZoneSet; action new; source setToCellZone; sourceInfo { set cook5; } }
+{ name fcu1; type cellSet; action new; source boxToCell; sourceInfo { box (1.0 0.2 2.0) (2.0 0.8 2.6); } }
+{ name fcu1; type cellZoneSet; action new; source setToCellZone; sourceInfo { set fcu1; } }
+{ name fcu2; type cellSet; action new; source boxToCell; sourceInfo { box (5.0 0.2 2.0) (6.0 0.8 2.6); } }
+{ name fcu2; type cellZoneSet; action new; source setToCellZone; sourceInfo { set fcu2; } }
+);

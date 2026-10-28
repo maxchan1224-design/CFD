@@ -1,0 +1,79 @@
+FoamFile { version 2.0; format ascii; class volScalarField; object p_rgh; }
+dimensions [0 2 -2 0 0 0 0];
+internalField uniform 0;
+boundaryField {
+floor { type fixedFluxPressure; value uniform 0; }
+ceiling { type fixedFluxPressure; value uniform 0; }
+west { type fixedFluxPressure; value uniform 0; }
+east { type fixedFluxPressure; value uniform 0; }
+south { type fixedFluxPressure; value uniform 0; }
+north { type fixedFluxPressure; value uniform 0; }
+supply1 { type fixedFluxPressure; value uniform 0; }
+supply2 { type fixedFluxPressure; value uniform 0; }
+extract1 { type fixedFluxPressure; value uniform 0; }
+extract2 { type fixedFluxPressure; value uniform 0; }
+hood1 { type fixedFluxPressure; value uniform 0; }
+hood2 { type fixedFluxPressure; value uniform 0; }
+hood3 { type fixedFluxPressure; value uniform 0; }
+hood4 { type fixedFluxPressure; value uniform 0; }
+hood5 { type fixedFluxPressure; value uniform 0; }
+transfer1 { type prghTotalPressure; rho rhok; p0 nonuniform List<scalar> 25 (
+6.89970000016
+6.89970000016
+6.89970000016
+6.89970000016
+6.89970000016
+5.0031
+5.0031
+5.0031
+5.0031
+5.0031
+3.10649999984
+3.10649999984
+3.10649999984
+3.10649999984
+3.10649999984
+1.20990000016
+1.20990000016
+1.20990000016
+1.20990000016
+1.20990000016
+-0.6867
+-0.6867
+-0.6867
+-0.6867
+-0.6867
+); value uniform 0; }
+transfer2 { type prghTotalPressure; rho rhok; p0 nonuniform List<scalar> 30 (
+-2.58330000016
+-2.58330000016
+-2.58330000016
+-2.58330000016
+-2.58330000016
+-4.47989999836
+-4.47989999836
+-4.47989999836
+-4.47989999836
+-4.47989999836
+-6.3765
+-6.3765
+-6.3765
+-6.3765
+-6.3765
+-8.27310000163
+-8.27310000163
+-8.27310000163
+-8.27310000163
+-8.27310000163
+-10.1696999984
+-10.1696999984
+-10.1696999984
+-10.1696999984
+-10.1696999984
+-12.0663
+-12.0663
+-12.0663
+-12.0663
+-12.0663
+); value uniform 0; }
+}

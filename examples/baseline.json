@@ -1,0 +1,31 @@
+{
+  "layout_id": "annotated-v2",
+  "name": "Baseline \u00b7 annotated layout",
+  "supply_lps": 290.0,
+  "supply_c": 15.0,
+  "supply_rh": 86.0,
+  "exhaust_lps": 560.0,
+  "hoods": [
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "fcus": [
+    false,
+    false
+  ],
+  "fcu_kw": 2.5,
+  "fcu_coil_c": 14.0,
+  "fcu_speed": 1.0,
+  "people": 5,
+  "sensible_w": 75.0,
+  "latent_w": 55.0,
+  "cooking_w": 0.0,
+  "cooking_kg_h": 0.0,
+  "transfer_c": 24.0,
+  "transfer_rh": 55.0,
+  "mesh": "coarse",
+  "iterations": 10000
+}

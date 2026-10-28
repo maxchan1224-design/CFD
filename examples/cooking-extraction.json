@@ -1,0 +1,31 @@
+{
+  "name": "Hoods + FCUs + cooking",
+  "supply_lps": 290.0,
+  "supply_c": 15.0,
+  "supply_rh": 86.0,
+  "exhaust_lps": 560.0,
+  "hoods": [
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "fcus": [
+    true,
+    true
+  ],
+  "fcu_kw": 2.5,
+  "fcu_coil_c": 14.0,
+  "fcu_speed": 1.0,
+  "people": 5,
+  "sensible_w": 75.0,
+  "latent_w": 55.0,
+  "cooking_w": 1000.0,
+  "cooking_kg_h": 0.3,
+  "transfer_c": 24.0,
+  "transfer_rh": 55.0,
+  "mesh": "coarse",
+  "iterations": 5000,
+  "layout_id": "provisional-v1"
+}

@@ -1,0 +1,22 @@
+FoamFile { version 2.0; format ascii; class volScalarField; object epsilon; }
+dimensions [0 2 -3 0 0 0 0];
+internalField uniform 0.001;
+boundaryField {
+floor { type epsilonWallFunction; value uniform .001; }
+ceiling { type epsilonWallFunction; value uniform .001; }
+west { type epsilonWallFunction; value uniform .001; }
+east { type epsilonWallFunction; value uniform .001; }
+south { type epsilonWallFunction; value uniform .001; }
+north { type epsilonWallFunction; value uniform .001; }
+supply1 { type fixedValue; value uniform 0.001; }
+supply2 { type fixedValue; value uniform 0.001; }
+extract1 { type inletOutlet; inletValue uniform 0.001; value uniform 0.001; }
+extract2 { type inletOutlet; inletValue uniform 0.001; value uniform 0.001; }
+hood1 { type epsilonWallFunction; value uniform .001; }
+hood2 { type epsilonWallFunction; value uniform .001; }
+hood3 { type epsilonWallFunction; value uniform .001; }
+hood4 { type epsilonWallFunction; value uniform .001; }
+hood5 { type epsilonWallFunction; value uniform .001; }
+transfer1 { type inletOutlet; inletValue uniform 0.001; value uniform 0.001; }
+transfer2 { type inletOutlet; inletValue uniform 0.001; value uniform 0.001; }
+}

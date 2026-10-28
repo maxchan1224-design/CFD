@@ -1,0 +1,22 @@
+FoamFile { version 2.0; format ascii; class volScalarField; object k; }
+dimensions [0 2 -2 0 0 0 0];
+internalField uniform 0.003;
+boundaryField {
+floor { type kqRWallFunction; value uniform .003; }
+ceiling { type kqRWallFunction; value uniform .003; }
+west { type kqRWallFunction; value uniform .003; }
+east { type kqRWallFunction; value uniform .003; }
+south { type kqRWallFunction; value uniform .003; }
+north { type kqRWallFunction; value uniform .003; }
+supply1 { type fixedValue; value uniform 0.003; }
+supply2 { type fixedValue; value uniform 0.003; }
+extract1 { type inletOutlet; inletValue uniform 0.003; value uniform 0.003; }
+extract2 { type inletOutlet; inletValue uniform 0.003; value uniform 0.003; }
+hood1 { type kqRWallFunction; value uniform .003; }
+hood2 { type kqRWallFunction; value uniform .003; }
+hood3 { type kqRWallFunction; value uniform .003; }
+hood4 { type kqRWallFunction; value uniform .003; }
+hood5 { type kqRWallFunction; value uniform .003; }
+transfer1 { type inletOutlet; inletValue uniform 0.003; value uniform 0.003; }
+transfer2 { type inletOutlet; inletValue uniform 0.003; value uniform 0.003; }
+}
